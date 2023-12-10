@@ -10,3 +10,14 @@ Math.min(...arr) // by writing three dots + name of an array can minimize work k
 
 console.log(arr) // it will display in array
 console.log(...arr)  // it will invidually display all elements of an array without []
+
+console.log("Akansha")
+console.log(..."Akansha") // Indvidually displays all character
+
+// Spread with Object Literals
+const info={
+    id:"vomesh",
+    password:"vomesh456@"
+}
+
+let info2={...info, name:"vomesh kumar", country:"India"} // storing and adding more info in new object literal info2
