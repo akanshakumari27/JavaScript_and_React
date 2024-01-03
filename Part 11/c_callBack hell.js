@@ -31,14 +31,14 @@ changeColor("green",3000)  //all are independent
 function changeColor(color,delay,further){
     setTimeout(function(){
         h1.style.color=color
-        if(further()) further() //if this function == true, exist then call this
+        if(further()) further() //if this function == true, then call it
     },delay)
 }
 
 changeColor("red",1000,()=>{
     changeColor("yellow",1000,()=>{
         changeColor("green",1000,()=>{
-            changeColor("blue",1000) //as here the function not exist therfor no further callback
+            changeColor("blue",1000) //as here the function not exist therfor no further call
         })
     })
 })
