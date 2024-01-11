@@ -47,4 +47,5 @@ async function getFacts(){
     console.log("Yay Few Facts are here!!")  //"try and catch" incase any error, it will not afect further this excution!!
    }
 getFacts()
+
  
