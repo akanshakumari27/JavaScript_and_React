@@ -1,0 +1,72 @@
+Different Terms
+• Command Line - any interface that is used by entering textual commands (gen. Windows centric)
+• Terminal - This is a type of command line (gen. Mac centric)
+• Console - A command-line interface used to work with your computer
+• Shell - A program running on terminal
+• Bash - A popular shell on Mac OSI Linux
+• Z-SheIl - Another shell (default)
+
+ Basics Command
+a) ls - list files (show my files)
+b) pwd - print working directory (where am i)
+c) clear - clear screen
+d) "~" - home directory
+e) "/" - root directory
+f) cd name - change directory
+g) cd name/name2 - change directory by 2 steps forward
+h) cd .. - back button of change directory
+i) cd ../.. - for two steps back
+j) tab - for autocomplete
+k) up and down arrow - for suggested and last command used
+l) mkdir - making directory (creating new folder of new name, if particular name already exist it won't create and shows error)
+   // can create new folder by both absolute and relative path way
+
+
+# example
+  pwd (print current directory)
+~ c/users/hp
+  ls (we will first check list)
+~ "in list alot will be there, we will pick desktop"
+  cd desktop
+  pwd
+~ c/users/hp/desktop
+  ls (again to go further more inside we can check list, and again cd __ and can check current directory with pwd)
+  cd .. (to jump out one step from current directory)
+  cd desktop/delta
+
+ Paths
+a) Relative path (it will let you jump from current path to upper)
+   // cd desktop/delta
+b) Absolute path (it will let you go to final path from any path you were, it doesn't care where you currently are)
+   // cd users/akansha/desktop/delta
+
+
+ Manual Command
+1) man ls - give information about "ls" command and also it's flags
+2) man mkdir - give information about "mkdir" command and also it's flags
+
+Flags: Flags are characterstics that we pass it with commands to modify their behaviour
+ls -l
+ls -a 
+ls -la
+{* In normal terminal might not work, probably works in linux so, 
+ wsl (to enter in linux)
+ man ls (will show all information now)
+ ls -l (now can use such commands)
+ exit (to exit from linux) *}
+
+m) Touch Command (used to create new files)
+ex: touch abc.html
+    touch abc.js
+    touch abc.text 
+    touch abc
+if check it by "man touch" we will, get to know it's actually helps to acess or change file timestamps,
+but if that named file doesn't exist it will create that file.
+("q" to exit from man, "h" for help)
+
+ Deleting File and Folder
+n) rm - remove files {rm abc.html abc.js abc.txt}
+o) rmdir - remove empty folder
+p) rm -rf - remove any folder
+      {"r" means recursive delete, "f" means forced, in combine known as "recursive force"(or can remeber it, "remove by force")}
+  // CAUTION: once the file deleted can't recover{sensitive}
