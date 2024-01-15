@@ -1,0 +1,6 @@
+Git ~ Free and open source "version control system" 
+    ~ Tools that helps to tracks changes in code
+    ~ Track history
+    ~ Help to collaborate
+
+GitHub ~ Website where we host repositories online
