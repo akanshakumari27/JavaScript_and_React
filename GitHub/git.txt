@@ -4,3 +4,76 @@ Git ~ Free and open source "version control system"
     ~ Help to collaborate
 
 GitHub ~ Website where we host repositories online
+
+README.md (mark down)
+
+// Terminal
+ ~ git --version (to check git version)
+ ~ git
+
+// Configuring Git (means storing our details in Git, 2 types Global and Local) 
+ ~ git config --global user.name"Akansha"
+ ~ git config --global user.email"kumariakansha159@gmail.com"
+ ~ git config --list
+
+ // Visual Code
+    (in that at below there's (x 0) click on that, then go to terminal and can run all commands)
+ ~ pwd
+ ~ ls
+ ~ ls -a (for hidden files(always strt with "."), we will always get to see ".git" only in git files!)
+ ~ git --version
+ ~ git config --list
+ ~ "q" to quit git
+ ~ clear
+ ~ git clone 'link' (code we want to clone from github to our local machine, code - local(beside codespace) - https - link)
+ ~ git status (to check it's current status, "M" modified, "U" untracked, staged )
+
+ ~ git add 'file name like-index.html' (add particular file)
+ ~ git add . (this will add file)
+ ~ git commit -m '"some message"' (m means message, and then msg under " ")
+ ~ git push origin main (push- upload local repo content to main repo)
+
+// Visual studio code, can create new files with help of commands in visual studio code
+~ cd .. (to jum out from current folder)
+~ ls  (to check folders)
+~ mkdir project2
+~ ls
+~ cd project2  (to take entry in folder project2)
+~ ls -la  (to check presence of hidden files, will found no .git, means it's not yet linked to github, a-showing hidden files, la-showing hidden files in list)
+~ git init  (init- "intialize" means intializing/adding new git repo)
+~ ls -la  (to verify, will find .git)
+  Now will create new Repo in github(without readme.md) and copy the link
+~ git remote add origin link..  (in Vs terminal)
+~ git remote -v  (to verify remote(fetch,push))
+~ git branch  (to check git's current branch) 
+  master(earlier it was master but now git decided to change it's name to "main", so we also need to change it to main for sucessful commit and push)
+~ git branch -M main
+~ git branch (to reverify)
+~ git push origin main
+
+  // Now later if make any new changes to that repo in git, just do
+~ git status
+~ git add .
+~ git commit -m "Second commitment"
+~ git push origin main
+~ git push -u origin main 
+ (-u means creating upstream, means once u write this, then no need to "git push origin main", only can write "git push" as in cloud upstream it stored it's info)
+~ git commit -am "added few lines" (when we do very little modification, we can commit and add at same time, am{add message})
+
+// Now let consider, 3 branches are there main, master, development 
+// to push code in development branch, "git push origin development"
+// or to change name of master to development, "git branch -M devlopment"
+
+// Git branch main(default branch), can create git branch named "feature" means making new duplicate copy of folder main, and doing all changes required in it
+// Real life Example, if 2 developers doing work on css and js, now one can do on "feature" and one on "main" parllely and later can combine all by pushing it in main branch!
+// furthemor can create more branches as per requirment, and after any sucessfull changes can push it in "main" branch
+
+ // Git branches
+~ git branch  (to check number of branches currently in this repo)
+~ git branch -M name1 (to Rename current branch)
+~ git checkout name2  (to getout from current branch and enter in "name2 branch")
+~ git checkout -b name2 (in case if name2 branch doesn't exist, then 1st create and then enter to name2 branch)
+~ git branch -d/-D name2 (to delete branch name2) {you can't delete branch, when you already in, first need to checkout from particular branch then delete}
+
+// Now let's created branch named feature, but still can't able to push it in main github, coz first need to upstream it in git
+~ git push --set-upstream/-u origin feature
