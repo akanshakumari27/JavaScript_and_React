@@ -1,2 +1,2 @@
 # JavaScript_by_apnaCollege
-Learning and storin JavaScript by Apna College.
+Learning and storing JavaScript and React by Apna College.
