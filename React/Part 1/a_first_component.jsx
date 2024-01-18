@@ -68,5 +68,5 @@ function App() {
       <p> 2 * 2 = {2*2} </p>
       <p>Your Good Name is {name.toUpperCase()}</p>
     </>
-  )
+  );
 }
