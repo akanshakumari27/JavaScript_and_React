@@ -1,0 +1,18 @@
+REACT: It's an Js library for creating UI(User Interface)
+react.dev
+React lets you build user interfaces out of individual pieces called components(components like button, card etc).
+React wriiten at JSX(Javascript Extension Syntax) {jacasript + HTML} It lets us write HTML directly inside Js
+In React when we write code in JSX, It's not real JS, it First Transpile/Converted with help of Babel to JS
+
+{react.dev} - {learn react} - {any app.js file} - {fork} - {copy code} - {babael(chrome search)} - {try it out} - {paste code} - {will get to see extracted java code}
+
+ //2 Tools availbale for React
+"Create-React-App" prety old and "Vite" released in 2020, faster compare to CRA
+
+// For React
+  {Vite in chrome} - {get started} - {copy NPM link} - {copy link inside folder in Vs code} - {Proceed process, after completeion of all process, we will also required "Node Module", So}
+  {cd fileName} - {npm install}
+  {npm run dev} to start our Server
+
+Component is reusable and independent piece of code!
+
