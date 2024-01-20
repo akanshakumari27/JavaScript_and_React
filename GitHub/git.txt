@@ -33,6 +33,7 @@ README.md (mark down)
  ~ git commit -m '"some message"' (m means message, and then msg under " ")
  ~ git push origin main (push- upload local repo content to main repo)
 
+
 // Visual studio code, can create new files with help of commands in visual studio code
 ~ cd .. (to jum out from current folder)
 ~ ls  (to check folders)
@@ -51,6 +52,7 @@ README.md (mark down)
 ~ git branch (to reverify)
 ~ git push origin main
 
+
   // Now later if make any new changes to that repo in git, just do
 ~ git status
 ~ git add .
@@ -68,6 +70,7 @@ README.md (mark down)
 // Real life Example, if 2 developers doing work on css and js, now one can do on "feature" and one on "main" parllely and later can combine all by pushing it in main branch!
 // furthemor can create more branches as per requirment, and after any sucessfull changes can push it in "main" branch
 
+
  // Git branches
 ~ git branch  (to check number of branches currently in this repo)
 ~ git branch -M name1 (to Rename current branch)
@@ -75,5 +78,51 @@ README.md (mark down)
 ~ git checkout -b name2 (in case if name2 branch doesn't exist, then 1st create and then enter to name2 branch)
 ~ git branch -d/-D name2 (to delete branch name2) {you can't delete branch, when you already in, first need to checkout from particular branch then delete}
 
+
 // Now let's created branch named feature, but still can't able to push it in main github, coz first need to upstream it in git
 ~ git push --set-upstream/-u origin feature
+
+
+// Merging Code
+~ git diff main (as currently in feature branch and want compare(commit, branches, files nd more) it with main branch)
+~ git merge main (to merge feature with main)
+
+ 2nd method to merge it using "Pull request"
+// We will get to see in Gthub, option "Compare and Pull Request"
+// It let you tell others about changes you pushed to branch in repositories in github
+
+Now with help of 2nd method, we can sucesfully merge "feature branch" with "main branch" in Github but in our local System it still incompleted
+So to complete it we use Pull command
+
+~ git pull origin main 
+
+(used to fetch and download content from a remote repo and immediately update the local repo to match that content, but sometime we also recieve Merge Conflicts)
+(Merge Conflict, if from 2 different sides both trying to do changes in same place/file and merging it in, github get confused whose changes to coinsider)
+An event that takes place when Git is unable to automatically resolve differences in code between two commits.
+
+   // Fixing Mistakes
+ a) Staged changes (when added the file not commited yet add. but want to unadd it)
+ ~ git reset app.js  (for particular file name)
+ ~ git reset  (for all file, thier last commits)
+
+ b) Commited Changes 
+ ~ git reset HEAD~1 (HEAD is kind of pointer pointing out the last commit, this will uncommit the last commit)
+ 
+ c) Commited Changes for Many Commits!
+   ** First..
+ ~ git log  (it will shows all informations of all commits)
+
+   ** Now we will select the hash code for the commit we want to delete till before and jump there (could be number of any commits)
+ ~ git reset HashCodeHere
+ ~ git reset --hard HashCodeHere (this will delete all adds and modfications also from the code which was commited before, also head pointer settled in new poistion now)
+   
+What is Forking?
+A fork is a new repository that shares code and visibility settings with the original "upstream"
+repository. "Open Source Contribution"
+Fork is a rough copy.
+
+Example: github search Node - fork - can untick(copy main branch only) if want to get acess all branches - create fork - it will get downloded in your account
+         - can commit change - pull request - new pull request(can merge with any branches, available branches options will availabel)
+
+Pull request - helps to merge 2 different branches of one repo
+             - also gives acess to add our code or contibution to somone's else repo 
