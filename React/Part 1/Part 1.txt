@@ -10,7 +10,7 @@ In React when we write code in JSX, It's not real JS, it First Transpile/Convert
 "Create-React-App" prety old and "Vite" released in 2020, faster compare to CRA
 
 // For React
-  {Vite in chrome} - {get started} - {copy NPM link} - {copy link inside folder in Vs code} - {Proceed process, after completeion of all process, we will also required "Node Module", So}
+  {Vite in chrome, "npm create vite@latest"} - {get started} - {copy NPM link} - {copy link inside folder in Vs code} - {Proceed process, after completeion of all process, we will also required "Node Module", So}
   {cd fileName} - {npm install}
   {npm run dev} to start our Server
 

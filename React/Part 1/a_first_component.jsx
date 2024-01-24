@@ -12,6 +12,7 @@ import './App.css'
 function Title(){
   return <button>Click Me!</button>
 }
+
 function App() {
   return(
     <div>
@@ -52,12 +53,12 @@ function App() {
 
 //  JSX Rules (Writing Markup in JSX)
 // a) Component name always starts from Capital
-// b) There always should closing Tag {because when bubble convert jsx to js, it will search for closing syntax to compile it's work}
+// b) There always should closing Tag {because when bebble convert jsx to js, it will search for closing syntax to compile it's work}
 // c) camelCase in most of things {className} 
 // d) also if we have any reserved keyword in Js, we can't use it as HTML attributes in JSX, use alternates.
 
 // React Fragment, as per Rules need to return only single html entity in function, but creating "div" for that creates/stores extra Node.
-// So, if want not to create that extra Node, can use React Fragment (replacing <div></div> = <></> )
+// So, if not want to create that extra Node, can use React Fragment (replacing <div></div> = <></> )
 
 // {_} curly braces allows us to write pure javascript inside. 
 function App() {
@@ -70,3 +71,7 @@ function App() {
     </>
   );
 }
+
+// Structuring Components
+// Created one Product Card (title + description), but if want lumps of 3 cards we will again make ProductTab.jsx
+// Sumarize all 3 cards in ProductTab.jsx and then will import that ProdctTab in main App.jsx, This is what proper Structuring of Componenets
