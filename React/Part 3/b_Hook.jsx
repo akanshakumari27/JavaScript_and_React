@@ -22,11 +22,12 @@ export default function(){
     let incCount=()=>{  {/*Or function incCount(){}*/}
         setCount(count+1);
         console.log(count); {/* Will found in Page 1,2,3 but in Console 0,1,2 */}  
+        {/* Because, in this Function we get the Value before "Rendering" and in Return we get value after "Reander" */}
     }
     return(
         <div>
-            <h3>Count: {count}</h3>
-            <button onClick={incCount}>Click Me!</button>
+            <h3>Count: {count}</h3> {/* value after rendering */}
+            <button onClick={incCount}>Click Me!</button> 
         </div>
     )
 }
@@ -49,6 +50,31 @@ export default function(){
                 {like? <i className="fa-regular fa-heart"></i> : <i className="fa-solid fa-heart" style={{color:"red"}}></i>}
             </p>
             <p>Clicks = {count}</p>
+        </div>
+    )
+}
+
+
+// *** Counter 2 ***
+import {useState} from "react"
+
+export default function Button(){
+    let [ count , setCount] = useState(0)
+
+    function getCount(){
+        setCount((currentCount)=>{
+            return currentCount + 1;
+        })
+        setCount((currentCount)=>{
+            return currentCount + 1;
+        })
+        {/*This will update 2 times, therefor 0,2,4,6*/}
+        {/* setCount(25) ,it will directly return 25*/}
+    } 
+    return(
+        <div onClick={getCount}>
+            <h2>Your CountUp: {count} </h2>
+            <button>Click Me!</button>
         </div>
     )
 }
