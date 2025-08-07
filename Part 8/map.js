@@ -1,5 +1,5 @@
-// Map function works similar as forEach function, but later it  creates new array and stored all called elements in it
-// will create at same size, if print empty output will be undefined
+// Map function works similar as forEach function, but later it creates new array and stored all called elements in it
+// It will create of same size of previous array, and if no value is passed in function inside map then it will print undefined
 let arr=[2,3,4,5,6,7,8,9]
 let double = arr.map((num)=>{
     console.log(num*num) // or return
