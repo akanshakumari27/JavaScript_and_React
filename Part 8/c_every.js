@@ -1,8 +1,8 @@
 // Every And Some
 
 // "every function"
-// It will Return TRUE untill an unless all elements satisfying it as true, otherwise it will return false, same as "AND Operator"
-[2,4,6,8].every((ele)=>{ return ele%2==0})// OR console.log() // TRUE
+// It will Return TRUE untill an unless all elements satisfying the given condition, else it will return false, same as "AND Operator"
+[2,4,6,8].every((ele)=>{return ele%2==0})// OR console.log() // TRUE
 
 
 // "some function"
@@ -11,7 +11,7 @@
 
 
 // "reduce function  // also known as "reducer function""
-// It's also return single ouput but perfomance performed under themselves.
+// It also returns single value ouput but perfomance performed under themselves.
 // arr.reduce(reducer function with 2 variables(accumulator,element))
 let arr=[2,4,5,8,9]
 arr.reduce((ac,el)=> { 
@@ -43,7 +43,7 @@ let plug=crr.reduce((ac,el)=>{
 console.log(plug)
 
 
-// minum number in array with reduce plus function
+// minimum number in array with reduce plus function
 let num=[23,45,67,24,31,90,32,12]
 function getmin(num){  // by writing under the function we can find min of any function by, getmin([,,,]) by taking inputs
     let plug=num.reduce((ac,el)=>{
