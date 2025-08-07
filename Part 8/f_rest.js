@@ -1,21 +1,23 @@
-// Rest function is opposite to spread
-// Allows a function to take an indefinite number of arguments and bundle them in an array
+// Rest function is opposite to Spread
+// It allows a function to take an indefinite number of arguments and bundle them in an array
+// Syntax of Spread and Rest is same
 
-function sum(...args){   // ...args used for arguments to rest it
-    for(let i=0;i<args.length;i++){
+function sum(...args){   // ...args (user-defined name), which taking different arguments and storing it in single array
+    for(let i=0;i<args.length;i++){   //this function is taking every argument and just priniting one by one 
         console.log("We Got" + args[i])
     }
 }
 // sum(3,4,5)
 
 function min(){
-    console.log(arguments);
-    console.log(arguments.length)
+    // write min(1,2,3) in console window
+    console.log(arguments);   // 1, 2, 3
+    console.log(arguments.length)  // 3
     //argumnets.push(1), pop, reduce, map any method we can't apply here because it's just a collection not an array
 }
-// min(1,2,3)  as arguments is a collection in js
 
 // but still if we want to use arguments over array and want to apply methods on it we can do it by ...args
+// Test with any nums like sum(5,2,9) in console window to calculate
 function sum(...args){
     return args.reduce((ac,el)=>ac+el)
 }
