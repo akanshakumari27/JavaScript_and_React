@@ -34,8 +34,21 @@ console.log(studentsName); //it will return array of names
 
 //Filter Function 
 // It will filter out and print the function if it's satisfying the given condition
+// It works as TRUE and FALSE
 let brr=[90,45,73,62];
 let filt=brr.filter((element)=>{
     return element%2==0 //if the elements present in array satisfies the given condition
     // then filter function will filter out and returns seprate array of filtered elements
+})
+
+
+// NOTE: MAP vs ForEach, But in case of forEach 
+let yes = students.forEach((ele)=>{
+    return ele.name;
+})
+console.log(yes);  // this will NOT work
+// Because it’s only meant for side effects (e.g., printing, modifying values), not for building and returning new arrays.
+
+students.forEach((ele)=>{  // ONLY this will work
+    console.log(ele.name);  
 })
