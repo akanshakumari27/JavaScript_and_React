@@ -7,21 +7,25 @@ function sum(...args){   // ...args (user-defined name), which taking different 
         console.log("We Got" + args[i])
     }
 }
-// sum(3,4,5)
+// write sum(3,4,5) in console window
 
+
+// In JavaScript, inside non-arrow functions, there’s a special array-like object called arguments.
+// arguments contains all values passed to the function, even if you didn’t declare parameters.
+// It’s array-like → it has a length and index numbers, but it’s not a real array.
+// That’s why you can’t use array methods like .push(), .map(), .reduce() directly on it.
 function min(){
-    // write min(1,2,3) in console window
     console.log(arguments);   // 1, 2, 3
     console.log(arguments.length)  // 3
     //argumnets.push(1), pop, reduce, map any method we can't apply here because it's just a collection not an array
 }
+// write min(1,2,3) in console window
 
 // but still if we want to use arguments over array and want to apply methods on it we can do it by ...args
 // Test with any nums like sum(5,2,9) in console window to calculate
 function sum(...args){
     return args.reduce((ac,el)=>ac+el)
 }
-
 
 // For Min
 function min(...args){   // rest(args) helps to collect all in array
