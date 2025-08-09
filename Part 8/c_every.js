@@ -11,7 +11,7 @@
 
 
 // "reduce function  // also known as "reducer function""
-// It also returns single value ouput but perfomance performed under themselves.
+// It returns single value ouput and operations is performed under themselves.
 // arr.reduce(reducer function with 2 variables(accumulator,element))
 let arr=[2,4,5,8,9]
 arr.reduce((ac,el)=> { 
