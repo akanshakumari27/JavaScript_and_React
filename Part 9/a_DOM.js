@@ -99,7 +99,8 @@ para.innerHTML=`<u>${para.innerText}</u>`  // here you dont need to write whole 
 
 
 // *** Manipulating Attributes ***
-// attributes like id, class, style etc(example, attributes of image tag= src, alt)(attributes of a tag= href etc)
+// In HTML and JavaScript, attributes are extra pieces of information you add to HTML elements to define their properties, behavior, or appearance.
+// Example id, class, style etc (attributes of image = src, alt)(attributes of a tag = href etc)
 Object.getAttribute(attr) //to get
 Object.setAttribute(attr, val) //to set, 'val'+ is the value in which we want to set that attribute to Value
 
