@@ -10,15 +10,16 @@ box.addEventListener("mouseenter",function (){
     alert("Mouse Insdie Box")
 })
 
-// ***** <this> ******
+// ***** <this> in addEventListner() ******
 
 let btn1=document.querySelector("button")
 btn1.addEventListener("click",function(){
-    console.log(this) //"<button>Click Me!!</button>" will print from html
-    // means "this" directly indicates/call button
-    console.dir(this)
+    console.log(this)  // "<button>Click Me!!</button>" will print from html
+    // means "this" directly indicates/call button from HTML page
+    
+    console.dir(this)  // button object will return
     console.dir(this.innerText)
-    this.style.backgroundColor="blue";
+    this.style.backgroundColor="blue";  //it will change colur of button, when clicked
 })
 
 
