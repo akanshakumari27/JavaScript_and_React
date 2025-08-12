@@ -1,5 +1,5 @@
 let btn=document.querySelector("button")
-console.dir(btn)
+console.dir(btn)  //Here u will get all properties of Button, which you can apply!
 
 btn.onclick=function(){
     console.log("Button is clicked")
@@ -13,16 +13,15 @@ btn.onclick=function(){
 
 // *** For Multiple Buttons ***
 let buttons=document.querySelectorAll("button")
-console.dir(buttons)  // this will give Node List, as we selected all!
+console.dir(buttons)  // this will give Node List, for all buttons available in HTML page!
 
 for(btn of buttons){
-    btn.onclick=helo;  //we can write function outside
-    btn.onmouseenter=function(){   //or inside
+    btn.onclick=helo;  //we can write outside function
+    btn.onmouseenter=function(){   //or inside function ,on-mouse-enter will perform action when your bring cursor above that button
         console.log("yay");
     }
     console.dir(btn)  //now it give properties of an indvidual button object
-    //without function it will iterate automatically whole, it won't will be in our control!!
-    //in above line, don't do "helo()" coz again it will iterate automatically, becz we calling it right here!!
+    //in above line, don't use parenthesis() like, "helo()" because it will call the function directly, without performing any event and iterate automatically
 }
 
 function helo(){
