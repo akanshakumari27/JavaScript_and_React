@@ -1,6 +1,10 @@
 let btn=document.querySelector("button")
 console.dir(btn)  //Here u will get all properties of Button, which you can apply!
 
+// Inline Onclick
+<button onclick="console.log('Button is Clicked'); console.log('Hey! Akansha')">Click Me!</button>
+
+// Extrenal OnClick
 btn.onclick=function(){
     console.log("Button is clicked")
 }
