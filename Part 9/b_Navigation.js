@@ -41,15 +41,16 @@ box1.prepend(newp)
 let btn = document.createElement("button")
 btn.innerHTML="Click Me!!"
 let p=document.querySelector("p")
-p.insertAdjacentElement("beforebegin",btn)  // it will add before begining, not in paragraph, it will be seprated and just above paragraph (as like another para).
-p.insertAdjacentElement("afterbegin",btn)   // will add after begining, means now it will add inside parapgah as first word.
-p.insertAdjacentElement("beforeend",btn)    // will add before ending (or before fullstop). means inside that paragraph only, before fullstop.
-p.insertAdjacentElement("afterend",btn)     // .will add after end (after fullstop), not in paragrph, it will sperated and just below from the para (as like another para).
-
+// insertAdjacentElement('position', element)
+p.insertAdjacentElement("beforebegin",btn)  // it will add before begining, not in paragraph!! Outside, before the element
+p.insertAdjacentElement("afterbegin",btn)   // will add after begining!! Inside, at the beginning of the element
+p.insertAdjacentElement("beforeend",btn)    // will add before ending (or before fullstop)!! Inside, at the end of the element
+p.insertAdjacentElement("afterend",btn)     // .will add after end (after fullstop), not in paragrph!! Outside, after the element.
 // Removing Element
 body.removeChild(btn)
-p.remove
-body.remove //infact we can remove whole body
+p.remove()
+body.remove() //infact we can remove whole body
+document.body.remove() // OR just!!, instead using document.querySelector!!
 
 // Question 1
 // add <p> tag with RED text, which says "Hey! I am Red"
