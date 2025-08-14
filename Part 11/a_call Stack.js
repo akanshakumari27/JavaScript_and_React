@@ -12,7 +12,7 @@ three() // calling it in Global Scope
 //If we call three(), it will first call two(), two() will call one(), now final call is to one(){last in} will complete it's work and return back to two(){first out}
 //Now viseVersa two() will also finish it's work and return to three()
 //And finally three() get it's two(), now it will again directly call to one() and find sum and give Result {first in last out}
-//Previously three() value == undefined ,Now three() == 3
+//Now three() == 3
 //Note, It will still in Functional scope, js won't able to recognize it until call it in Global scope
 
 
