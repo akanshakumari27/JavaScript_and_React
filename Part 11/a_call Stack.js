@@ -18,9 +18,13 @@ three() // calling it in Global Scope
 
  // ***** BreakPoints *****
 
+// We have a big code, and we want to check one singel line, that how that particular line executes
+// then we can use breakpoints, adding breakpoint in that particular line (mainly use for debug)
+
 // Now we can debug and check in browser step by step,
-// 1) Sources -> top -> app.js 
-// 2) First alot any breakpoint(can be multiple breakpoints), where code will stop during/after Run! Refresh
+// Check call stack and breakpoints for above given code
+// 1) inspect -> Sources -> top -> app.js 
+// 2) First alot any breakpoint(can be multiple breakpoints), where code will stop during/after Run or Refresh
 // 3) press "arrowdown"(Step into next function call), we can see all multiple steps/every single execution in Stack
 // 4) In "Scope" also we will get outputs after every execution
 // 5) This is how we can check every single steps of stack and can debug it!!
