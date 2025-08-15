@@ -1,26 +1,29 @@
-// as Promise is Object, therfor it will have it's Methods/Properties too
+// Promise Helps us to pevent from Call-Back Hell
+// Promise Object represents the 'resolve' or 'reject' of an Asynchronus operations and results its Value.
+
+// as Promise is Object, therfore it will have it's Methods/Properties too
 // 2 popular Methods, "then()" and "catch()"
 // then(), if Promise fullfilled and want to go for further execution after fullfilled
 // catch(), if Promise rejected(error) and then go for further excution after rejection
 
-function callit(data){
+function savetoDB(data){
     return new Promise((resolve,reject)=>{
-        let check=Math.floor(Math.random()*10)+1
-        if(check>4){
+        let internetSpeed=Math.floor(Math.random()*10)+1;
+        if(internetSpeed > 4){
             resolve("Good Conection")
         }else{
             reject("Bad Conection")
         }
     })
 }
-callit("Hello Moto")
+savetoDB("Apple")
    .then(()=>{
        console.log("Sucessfully Executed Data 1")
-       return callit("Hey Moto")  //if 1 sucesfully excuted, will call 2 by then(), other wise .catch()
+       return savetoDB("Banana")  //if 1 sucesfully excuted, will call 2 by then(), other wise .catch()
     })
     .then(()=>{
         console.log("Sucessfully Executed Data 2")
-        return callit("Hi Moto") //if 2 sucesfully excuted, will call 3 by then(), other wise .catch()
+        return savetoDB("Guava") //if 2 sucesfully excuted, will call 3 by then(), other wise .catch()
     })
     .then(()=>{
         console.log("Sucessfully Executed Data 3")
@@ -28,19 +31,20 @@ callit("Hello Moto")
     .catch(()=>{
        console.log("Unsucesfull")
     })
-// Better Version of same problem, but better solution!
-// Known as Promise chaining
 
-callit("Hello Moto")
+// Better Version of same problem, but better solution! (Actually both are same Codes: here just added result for console window, nothing much)
+// Known as Promise chaining
+// As in try-catch; there Multiple Try and Single Catch Available, simillarly Mutiple '.then' and single '.catch'
+savetoDB("Apple")
    .then((result)=>{
        console.log("Sucessfully Executed Data 1")
-       console.log("Result is :", result)  // results-> resolve
-       return callit("Hey Moto")  //if 1 sucesfully excuted, will call 2 by then(), other wise .catch()
+       console.log("Result is :", result)  // result-> "Good Conection" or "Bad Conection", which is mentioned above as resolve() and reject()
+       return savetoDB("Banana")  //if 1 sucesfully excuted, will call 2 by then(), other wise .catch()
     })
     .then((result)=>{
         console.log("Sucessfully Executed Data 2")
         console.log("Result is :", result)
-        return callit("Hi Moto") //if 2 sucesfully excuted, will call 3 by then(), other wise .catch()
+        return savetoDB("Guava") //if 2 sucesfully excuted, will call 3 by then(), other wise .catch()
     })
     .then((result)=>{
         console.log("Sucessfully Executed Data 3")
