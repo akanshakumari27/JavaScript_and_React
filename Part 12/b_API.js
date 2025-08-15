@@ -1,4 +1,3 @@
-
 // Application Programming Interface
 // Generally 2 softwares interact through API's
 // But when any API interact through "https protocol", means interact on bases of internet, Web API
