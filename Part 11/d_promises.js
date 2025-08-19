@@ -52,7 +52,7 @@ savetoDB("Apple")
     })
     .catch((error)=>{
        console.log("Unsucesfull")
-       console.log("Result is :", error) // error->reject
+       console.log("Result is :", error) // error->reject, means will print "Bad Conection"
     })
 
 
