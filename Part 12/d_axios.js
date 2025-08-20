@@ -1,14 +1,22 @@
-/*
+// Axios is library, with help of which we make HTTP request!
+// Library to make HTP request, it internally uses fetch
+// Search Axios github -> scroll down -> install (you can install diffrent axios from this)
+// But we will go to CDN section, copy CDN link and paste in HTML Header section (Script Tag)
+
+/*    -- HTML Page --
     <h1>Getting Random Facts</h1>
     <button>Click Me! to get Facts</button>
     <p></p>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>  //github.axios-> installing-> cdn
-    */ 
+*/ 
 
+// Now write same code using AXIOS
+// Why to use Axios over Fetch?
+// because we dont get data directly from fetch, we need to use parse, But with Axios you can directly get data from API
 let url="https://catfact.ninja/fact"
 let btn = document.querySelector("button")
 let p=document.querySelector("p")
-btn.addEventListener("click",async ()=>{  //as hav() is an async function, therfor we need to convert this also in async to call it's function
+btn.addEventListener("click",async ()=>{  //as hav() is an async function, therfore we need to convert this also in async to call it's function
   let getIt = await hav()
   p.innerText = getIt
 })
@@ -16,10 +24,10 @@ async function hav(){
   try {
     let getFact = await axios.get(url) //axios.get() = fetch()
     console.log(getFact.data.fact)
-    return getFact.data.fact
+    // return getFact.data.fact [if linking this code with above 
   } catch (error) {
     console.log("Error: ",error)
-    return "Error!"
+    // return "Error!"
   }
 }
 // But why need to replace axios.get() from fetch()
@@ -54,4 +62,4 @@ async function hav(){
   }
 }
 // do generally some API's are free, but still it have limits like, 20 or 15 calls in a minute.
-// so remember not to use loop etc, otherwise they may block or can take other actions!
+// so remember not to use loop etc for API, otherwise they may block or can take other actions!
