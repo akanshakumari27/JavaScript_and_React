@@ -1,6 +1,8 @@
 // Sending Headers with API requests
 // "Sending Header" in "Axios request"
 
+// In an API, headers are like extra information sent along with your request or response. They help the client and server communicate properly.
+
 let url="https://icanhazdadjoke.com/"
 
  async function getHeader(){
@@ -15,8 +17,10 @@ let url="https://icanhazdadjoke.com/"
 // Improved Method for Header File
 async function getHeader(){
   try{
-    //So, first need to create header and pass object with key value pair!
-    const config = {headers : { Accept: "application/json"} }
+    // Headers can influence the format of the data you get from an API.
+    // Here header will help to return the data in JSON Format
+    // So, first need to create header and pass object with key value pair!
+    const config = {headers : { Accept: "application/json"} }  // Object with Key-Value Pair
     let get = await axios.get(url, config)
     console.log(get.data)
   }catch(error){
