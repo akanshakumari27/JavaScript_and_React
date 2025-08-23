@@ -1,5 +1,5 @@
 // Axios is library, with help of which we make HTTP request!
-// Library to make HTP request, it internally uses fetch
+// Library to make HTTP request, it internally uses fetch
 // Search Axios github -> scroll down -> install (you can install diffrent axios from this)
 // But we will go to CDN section, copy CDN link and paste in HTML Header section (Script Tag)
 
@@ -12,7 +12,9 @@
 
 // Now write same code using AXIOS
 // Why to use Axios over Fetch?
-// because we dont get data directly from fetch, we need to use parse, But with Axios you can directly get data from API
+// fetch → You need to manually call .json() 
+// Axios → Response data is already converted to JSON.
+
 let url="https://catfact.ninja/fact"
 let btn = document.querySelector("button")
 let p=document.querySelector("p")
