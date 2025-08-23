@@ -18,6 +18,7 @@ async function greet(){
 // ## Cases where promise will show Rejected ##
 async function greet(){
     throw "Some random error";  //this will throw an error, (throw keyword is used to throw error), Promise: rejected
+    // And because of the Error further execution will also STOP!
     console.log("Hello");
 }
 
