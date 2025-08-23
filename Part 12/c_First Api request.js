@@ -1,8 +1,8 @@
 let url = "https://catfact.ninja/fact"
-fetch(url) // inspect - network - All - fact - preview
+fetch(url) // inspect - network - All - fact - preview (will get JSON Value, Alternative way of using 'hoppscotch')
 // This is how you can check API Status
-//paste fetch(url) in console window, it will return **"Promise"** thrfore we can apply Promise methods on it
-// API calls asynchronusly
+// paste fetch(url) in console window, it will return **"Promise"** thrfore we can apply Promise methods on it
+// 'API calls asynchronusly'
 
 // we can see the ans/output in network response but can't in console, it will display "body:ReadableStream" 
 // therfore to see response in console, we will first "fetch it" and if sucesfully fetched, we will asked to "return it's json"
@@ -12,7 +12,8 @@ fetch(url)
  .then((response)=>{   //the response we recieve from URL
    //  console.log(response.json()) //it will return Promise, therfor we can use Promise methods(then,catch)
     return response.json() //this also returns promise, this helps to read our Data
-    console.log(response.json());
+    // first Fetch URL -> convert into JSON -> Extract Data -> Agian Fetch(url)....
+    // console.log(response.json());  
  })
  .then((data)=>{
    console.log("data 1: ",data.fact)
@@ -50,10 +51,11 @@ async function getFacts(){
 
 //to print only data from API, we will again use .json
 // this printing two random Facts
+// SAME -> first Fetch URL -> convert into JSON -> print Fact -> again Fetch URL......
 async function getFacts(){
    try{
     let res = await fetch(url2)  
-    let data = await res.json()  
+    let data = await res.json()  // also need to add await here, else data1 will be Promise, not an object (So to convert it into Object)
     console.log(data.fact)
 
     let res2 = await fetch(url2)
