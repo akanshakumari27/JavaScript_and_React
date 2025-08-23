@@ -17,24 +17,29 @@
 // https://www.boredapi.com/api/activity (sends an activity to do when bored)
 // https://dog.ceo/api/breeds/image/random (sends cute dog pictures)
 
-//APIs returns data only in JSON, which simillar to "object: key" in js, therfor no image as no html nd css
+// APIs returns data only in JSON, which simillar to "object: key" in js, therfore no image as no html and css
 
 // JSON "Javascript Object Notation"
-// It not only part of js," It's just an Format ", if call data API from any language it will return JSON only
+// It is not tied only to JavaScript, it’s language-independent but uses a syntax similar to JavaScript objects.
+// "It's just an Format", if call data API from any language it will return JSON only
 
 // Earlier data was returned in XML form(very simillar to HTML), but nowdays it returns in JSON format.
-// JSON simillar to key:value pair of object But not Object, like "undefined" is object value in JS but not in JSON
+// JSON simillar to key:value pair of object But not Object, it’s just a string format (text-based).
 // to check all JSON value/properties, www.json.org
 // can also check that given json is valid or not; json validator
 
+// Here you directly create a JavaScript object literal (not JSON string).
+// No parsing step, it’s already an object.
 let file={"fact": "Cats make about 100 different sounds. Dogs make only about 10.","length": 62}
 console.log(file.fact)
 
 // In JS, JSON comes in string format, so we need to use parse to extract it from string
 // Acessing data from JSON
-// a) JSON.parse(data) -- to parse a string data into js object
-// b) JSON.stringify(data) -- to parse js object data into json
+// a) JSON.parse(data) -- converts a JSON string into a JavaScript object.
+// b) JSON.stringify(data) -- converts a JavaScript object into a JSON string.
 
+// Here you start with a JSON string (notice the outer '...' and inner "...").
+// JSON.parse(...) converts that JSON string → into a real JavaScript object.
 let json='{"fact": "Cats make about 100 different sounds. Dogs make only about 10.","length": 62}'; //actual json
 let js=JSON.parse(json) 
 console.log(js.fact)
@@ -81,6 +86,6 @@ console.log(js.fact)
 // Scroll down -> APIs Docs -> API -> REST -> Expand to see all avilable APIs
 // https://potterdb.com/  : in additonal add given API and paste Whole link to Hoppscotch site!! 
 
-// key-constant but value-variable
+// 'key is constant' but 'value is variable'
 // if written 2 key-value pairs with "&" and one is invalid, then it will ignore the invalid one and we will recieve output only for valid one!
 // Meta data means; data about data
