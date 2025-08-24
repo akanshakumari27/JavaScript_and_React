@@ -1,15 +1,30 @@
+Git is a Version Control System (VCS), it's created by Linus Torvalds (the guy who made Linux) in 2005.
+It helps developers track changes in code, collaborate with others, and go back to old versions if something breaks.
+
+-> "Git" is a version control system (VCS)
+-> "Git Bash" is a terminal (command line tool) for Windows that lets you run Git commands.
+-> "GitHub" is a cloud-based platform where you can host Git repositories.
+
 Different Terms
 • Command Line - any interface that is used by entering textual commands (gen. Windows centric)
 • Terminal - This is a type of command line (gen. Mac centric)
 • Console - A command-line interface used to work with your computer
+
 • Shell - A program running on terminal
+
 • Bash - A popular shell on Mac OSI Linux
 • Z-SheIl - Another shell (default)
+
+// ** In Git Bash **
 
  Basics Command
 a) ls - list files (show my files)
 b) pwd - print working directory (where am i)
 c) clear - clear screen
+
+Use UpKeyword to get previous used commands
+ViseVersa DownKeyword to later used commands
+
 d) "~" - home directory
 e) "/" - root directory
 f) cd name - change directory
@@ -45,7 +60,7 @@ b) Absolute path (it will let you go to final path from any path you were, it do
 1) man ls - give information about "ls" command and also it's flags
 2) man mkdir - give information about "mkdir" command and also it's flags
 
-Flags: Flags are characterstics that we pass it with commands to modify their behaviour
+Flags: Flags are characterstics that we pass it with commands with external information to modify their behaviour
 ls -l
 ls -a 
 ls -la
@@ -66,7 +81,7 @@ but if that named file doesn't exist it will create that file.
 
  Deleting File and Folder
 n) rm - remove files {rm abc.html abc.js abc.txt}
-o) rmdir - remove empty folder
+o) rmdir - remove empty folder only
 p) rm -rf - remove any folder
-      {"r" means recursive delete, "f" means forced, in combine known as "recursive force"(or can remeber it, "remove by force")}
-  // CAUTION: once the file deleted can't recover{sensitive}
+      {"r" means 'recursive delete', "f" means 'force delete', in combine known as "recursive force"(or can remeber it, "remove by force")}
+  // CAUTION: once the file deleted it can't recover {sensitive} [through normal deletion u can restore by recycle bin! but through terminal u can't]
