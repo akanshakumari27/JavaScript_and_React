@@ -1,24 +1,20 @@
-// Component is reusable and independent piece of code
+// App.jsx and App.css : Both make (one component File, combined of all 3 HTML, CSS, JavaScript)
+// Genrally Every Components has diffrent component file.jsx, but just for shake of practice right now, we will make all under App.jsx
 
-function Title(){  // Component name always starts from Capital
-    return(
-        <h1>Hello World!</h1>  // return value could be any one single HTML element 
-    );
-}
-// <Title> </Title> = <Title /> 
-
+// ******** App.jsx *********
 import './App.css'
-
-function Title(){
-  return <button>Click Me!</button>
+function Title(){  // Component name always starts from Capital
+  return (
+      <button>Click Me!</button>  // return value could be any one single HTML element
+  );   
 }
-
+// <Title> </Title> OR <Title/> both are Correct!
 function App() {
   return(
     <div>
       <h2>Hello! I'm Heading</h2>
       <p>Hey! I'm Paragraph</p>
-      <Title />
+      <Title/>
     </div>
   )
 }
@@ -45,11 +41,17 @@ function App() {
 }
 
 // *** Import - Export ***
-// a) export default Name1   ** Deafault exports are handy for exporting single value **
-//    import Name1 from './Name1.jsx'
+// a) export default Name1             ("Default exports" are handy for exporting "single" value)
+//    import Name1 from './Name1.jsx'  (We can import with Diffrent name too, regardless of Export name)
 
-// b) export {Name1}    ** Named Exports are useful when need to export Multiple Values **
-//   import {Name1} from './Name1.jsx'
+// b) export {Name1 Name2}  ("Named Exports" are useful when need to export "Multiple" Values)
+//    import {Name1 Name2} from './Name1.jsx'
+
+// c) export default function Name1() {return <h1>Hello</h1>;}
+//    import { Name1 } from './Name1.jsx';  (we can import with custom name here, for that follow below import procedure)
+// OR import { Name1 as MyComponent } from './Name1.jsx'; 
+
+// React Documentation -> Quick Start -> Describing the UI -> Writing markup with JSX -> Scroll Down (Rules for JSX)
 
 //  JSX Rules (Writing Markup in JSX)
 // a) Component name always starts from Capital
@@ -66,12 +68,13 @@ function App() {
   return(
     <>
       <h2>Hello! I'm Heading</h2>
-      <p> 2 * 2 = {2*2} </p>
+      <p> 2 * 2 = {2*2} </p>  //expresion inside {} is treated as pure JS
       <p>Your Good Name is {name.toUpperCase()}</p>
     </>
   );
 }
 
 // Structuring Components
-// Created one Product Card (title + description), but if want lumps of 3 cards we will again make ProductTab.jsx
-// Sumarize all 3 cards in ProductTab.jsx and then will import that ProdctTab in main App.jsx, This is what proper Structuring of Componenets
+// Created one Product Card (title + description), product.jsx
+// but if want lumps of 3 cards we will again make ProductTab.jsx, importing product.jsx, where Storing and Sumarizing 3 Product Cards
+// Now we will import that ProdctTab in main App.jsx, This is what proper Structuring of Componenets
