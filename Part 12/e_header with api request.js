@@ -27,3 +27,6 @@ async function getHeader(){
     console.log("Error: ",error)
   }
 }
+
+// Asynchronous means: it doesn’t block other code while waiting for API response.
+// Accept": "application/json" tells the server: Please give me the response in JSON format instead of HTML, XML, or plain text.
