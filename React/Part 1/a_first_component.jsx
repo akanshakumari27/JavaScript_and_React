@@ -78,3 +78,11 @@ function App() {
 // Created one Product Card (title + description), product.jsx
 // but if want lumps of 3 cards we will again make ProductTab.jsx, importing product.jsx, where Storing and Sumarizing 3 Product Cards
 // Now we will import that ProdctTab in main App.jsx, This is what proper Structuring of Componenets
+
+// Styling React Components
+// For every singel components, we should make seprate styling sheet
+// App.jsx -> App.css
+// Product.jsx -> Product.css
+// ProductTab.jsx -> ProductTab.css
+// And to link styling sheet we Import that to JSX sheet!! 
+// Inside React, there WebPack is available which gives functionality of Import and Export
