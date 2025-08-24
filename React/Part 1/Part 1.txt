@@ -1,18 +1,31 @@
-REACT: It's an Js library for creating UI(User Interface)
-react.dev
-React lets you build user interfaces out of individual pieces called components(components like button, card etc).
-React wriiten at JSX(Javascript Extension Syntax) {jacasript + HTML} It lets us write HTML directly inside Js
-In React when we write code in JSX, It's not real JS, it First Transpile/Converted with help of Babel to JS
+-> React is an Js library for creating UI(User Interface) {It's created and maintained by Facebook}
+Official Page { react.dev }
 
-{react.dev} - {learn react} - {any app.js file} - {fork} - {copy code} - {babael(chrome search)} - {try it out} - {paste code} - {will get to see extracted java code}
+React lets you build user interfaces with individual pieces called components(components like button, card etc).
+In JS, Functions is indvidual piece of code, which are reusable, simillarly in React Components are Reusable
 
- //2 Tools availbale for React
-"Create-React-App" prety old and "Vite" released in 2020, faster compare to CRA
+***** React Native brings the React programming paradigm to platforms like Android and iOS. *****
+-> React.js is a JavaScript library primarily used for building user interfaces (UIs) for web applications.
+-> React Native is a framework for building native mobile applications for platforms such as iOS and Android.
+
+-> React written at JSX (Javascript Extension Syntax) {jacasript + HTML} It lets us write HTML directly inside Js
+In React when we write code in JSX, It's not real JS, So it First Transpile/Converted with help of Babel to JavaScript
+JSX -> Babel -> JS
+
+(react.dev) -> (learn react) -> (any app.js file) -> (fork) -> (copy code) -> (search babael in chrome) -> (try it out) -> (paste code) -> (will get to see extracted java code)
+
+ // 2 Tools availbale for React
+"Create-React-App" old site and "Vite" released in 2020, faster compare to CRA
 
 // For React
-  {Vite in chrome, "npm create vite@latest"} - {get started} - {copy NPM link} - {copy link inside folder in Vs code} - {Proceed process, after completeion of all process, we will also required "Node Module", So}
-  {cd fileName} - {npm install}
-  {npm run dev} to start our Server
+// Vite mean "quick" or "fast" in French and Italian
 
-Component is reusable and independent piece of code!
+(Vite in chrome) -> (click get Started and scroll down) -> (npm create vite@latest) -> (copy NPM link) -> (paste link inside folder in Vs code) -> (Proceed process, after completeion of all process, we will also required "Node Module", So) -> (cd fileName()) -> (npm install) -> (npm run dev) to start our Server
 
+*** npm install ***
+Downloads and installs all the dependencies (libraries/packages) listed in your package.json file. Installs everything from package.json
+It creates a node_modules folder (where all packages live)
+
+*** npm run dev ***  (After installing, it is Start the server now)
+Runs the custom script named "dev" from package.json
+Usually used to start a development server (e.g., Vite, Next.js, React)
