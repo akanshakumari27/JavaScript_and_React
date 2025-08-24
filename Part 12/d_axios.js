@@ -85,7 +85,7 @@ btn1.addEventListener("click",async ()=>{
 async function hav(){
   try {
     let getImg = await axios.get(url1)
-    return getImg.data.message;;
+    return getImg.data.message;
   } catch (error) {
     let er = console.log("Error: ",error)
     return er;
