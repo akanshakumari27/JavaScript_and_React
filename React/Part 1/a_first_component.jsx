@@ -59,7 +59,7 @@ function App() {
 // c) camelCase in most of things {className} 
 // d) also if we have any reserved keyword in Js, we can't use it as HTML attributes in JSX, use alternates.
 
-// React Fragment, as per Rules need to return only single html entity in function, but creating "div" for that creates/stores extra Node.
+// React Fragment, as per Rules need to return only single html entity in function, but creating "div" for that creates/stores extra Node (an unnecessary element in the DOM tree)
 // So, if not want to create that extra Node, can use React Fragment (replacing <div></div> = <></> )
 
 // {_} curly braces allows us to write pure javascript inside. 
