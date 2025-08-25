@@ -1,33 +1,9 @@
 // ****** React Props ********
 // Props are the extra Information that you pass to JSX tag.
 
-/*
-   if we pass any information here, known as props
-   <Product information />  ** will use as an argument in function, which further can use inside function, eg. given below**
-
-       means
-
-    function Product(information){
-        return UI
-    }
-*/ 
-
-/*
- sum(a+b){   //argument
-    return a+b;
- }
- sum(4,3)  //value/parameter
- 
- simillarly,
-
- <Product title="Phone" price="10k" /> (title = argument, Phone = value/parameter)
-*/
-
-// Now, if want to see inner props of component using Console.log, need to comment React.StrictMode otherwise will print object twice!
-// function Product(props){
-//   console.log(props)
-// }
-
+// <Product title="Phone" price="10k" /> (title = argument, Phone = value/parameter)
+// Now, if want to see inner props of component using Console.log, then need to comment React.StrictMode in 'main.jsx' otherwise will print object twice!
+// Uncomment it Later, it was just to see for Console Window 
 
 // a) ProductTab.jsx
 function ProductTab(){
@@ -39,7 +15,7 @@ function ProductTab(){
         </>
     )
 }
-//Product.jsx
+// Product.jsx
 function Product(props){
     console.log(props)  //Object
     return(
