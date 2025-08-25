@@ -1,6 +1,5 @@
- // React Props
+// ****** React Props ********
 // Props are the extra Information that you pass to JSX tag.
-// Components are like function
 
 /*
    if we pass any information here, known as props
