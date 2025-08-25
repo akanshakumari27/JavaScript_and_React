@@ -20,7 +20,7 @@ JSX -> Babel -> JS
 // For React
 // Vite mean "quick" or "fast" in French and Italian
 
-(Vite in chrome) -> (click get Started and scroll down) -> (npm create vite@latest) -> (copy NPM link) -> (paste link inside folder in Vs code) -> (Proceed process, after completeion of all process, we will also required "Node Module", So) -> (cd fileName()) -> (npm install) -> (npm run dev) to start our Server
+(Vite in chrome) -> (click get Started and scroll down) -> (npm create vite@latest) -> (copy NPM link) -> (paste link inside folder in Vs code) -> (Proceed process, after completeion of all process, we will also required "Node Module", So) -> (cd fileName(filename in VScode where u want npm)) -> (npm install) -> (npm run dev) to start our Server
 
 *** npm install ***
 Downloads and installs all the dependencies (libraries/packages) listed in your package.json file. Installs everything from package.json
