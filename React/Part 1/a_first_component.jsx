@@ -86,3 +86,6 @@ function App() {
 // ProductTab.jsx -> ProductTab.css
 // And to link styling sheet we Import that to JSX sheet!! 
 // Inside React, there WebPack is available which gives functionality of Import and Export
+
+// For CSS file, not need to Export 
+// Just import './Card.css' on Main page, where you want to import
