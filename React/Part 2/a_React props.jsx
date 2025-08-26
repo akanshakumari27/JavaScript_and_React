@@ -150,6 +150,8 @@ function Card({name, col}) {
     return (
         <div className="Card">
             <h2 style={{color: col}}>Hello {name}</h2>
+            {/* Outer {} → switch to JavaScript mode inside JSX (as inside curly braces, you can perform JS calculation etc)
+                Inner {} → an object literal containing CSS styles in camelCase */}
         </div>
     );
 }
