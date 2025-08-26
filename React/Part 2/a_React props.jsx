@@ -5,7 +5,7 @@
 // Now, if want to see inner props of component using Console.log, then need to comment React.StrictMode in 'main.jsx' otherwise will print object twice!
 // Uncomment it Later, it was just to see for Console Window 
 
-// a) ProductTab.jsx
+// a) ProductTab.jsx *********************************************************************************
 function ProductTab(){
     return(
         <>
@@ -27,7 +27,7 @@ function Product(props){
 }
 
 
-// b) ProductTab.jsx
+// b) ProductTab.jsx ***********************************************************************************
 function ProductTab(){
     return(
         <>
@@ -47,13 +47,13 @@ function Product({title, price="4000"}){ //we can assign default value also, if 
     )
 }
 
-// *** Writing Props in form of Array and Object(Key-value) pair ***
+// *** Writing Props in form of Array and Object(Key-value) pair **********************************************
 // ProductTab.jsx
 function ProductTab(){
-    let options1 = ["hey, ","hello, ","how are you"] //bydefault there will be no space, so need to provide extra space
-    let options2 = {veggie:"tomato", fruit:"apple", tree:"banana tree"} //Object only works when there only 1 Product to return
+    let options1 = ["hey, ","hello, ","how are you"] // bydefault there will be no space, so need to provide extra space
+    let options2 = {veggie:"tomato", fruit:"apple", tree:"banana tree"} // Object only works when there only 1 Product to return
     return( 
-        //all props must inside in {}
+        //all props must inside in curly braces{}
         <>
         <Product 
         title="Phone" 
@@ -78,7 +78,7 @@ function Product({title, price, feature1, feature2, feature3, feature4}){
     )
 }
 
-// *** Rendering Array, extracting or printing all Array elements indvidually ****
+// *** Rendering Array, extracting or printing all Array elements indvidually ******************************
 function ProductTab(){
     let arrayElement = [<li>"Hello!"</li>,<li>"How"</li>,<li>"are"</li>,<li>"you"</li>]
     return( 
@@ -90,17 +90,7 @@ function ProductTab(){
         </>
     )
 }
-function Product({title, price,elements}){ 
-    return(
-        <div className = "Product"> 
-        <h4>{title}</h4>
-        <p>{price}</p>
-        <p>{elements}</p>
-        </div>
-    )
-}
- 
-// Second Method
+// Second Method to diplay array in List using Map
 function ProductTab(){
     let arrayElement = ["Hello!","How","are","you"]
     return( 
@@ -118,14 +108,15 @@ function Product({title, price, elements}){
         <h4>{title}</h4>
         <p>{price}</p>
         <p>{
-         elements.map((element)=>(<li>{element}</li>)) //Map is used to iterate over an array and return new array()=>()
+        {/*In React (JSX), when you use an arrow function with {}, you need to explicitly return something. Therefore map()=>{} will not Work*/}
+         elements.map((element)=>(<li>{element}</li>))
         }</p>
         </div>
     )
 }
 
 
-// *** Conditionals: Adding Elements on basis of Some Conditions ***
+// *** Conditionals: Adding elements and Styling on basis of Some Conditions ****************************************************
 function ProductTab(){
     return( 
         <>
@@ -135,36 +126,46 @@ function ProductTab(){
         </>
     )
 }
-function Product({title, price}){ 
-    if(price>40000){
-        return(
-            <div className = "Product"> 
-            <h4>{title}</h4>
-            <p>{price}</p>
-            <p>Discount: 5%</p>
-            </div>
-        )
-    }else{
-        return(
-            <div className = "Product"> 
-            <h4>{title}</h4>
-            <p>{price}</p>
-            </div>
-        )
-    }
-}  
-// Better and Optimised method with Dynamic Component of Styling
+
 function Product({title, price}){
-    let getStyle = {backgroundColor : price>30000 ? "pink":""}
+    let getStyle = {backgroundColor: price>30000 ? "pink":""}
     return(
         <div className = "Product" style={getStyle}> {/*Writing "style" in jsx*/}
         <h4>{title}</h4>
         <p>{price}</p>
-        {/* <p>{price>40000 ? "Discount: 5%":""}</p> ,but this creates empty paragraph tag for false statement*/}
-        {price>40000 ? <p>Discount: 5%</p>:null}
+        {/* <p>{price>40000 ? "Discount: 5%":""}</p> ,but this creates empty paragraph tag for false statement, which will ultimately creates extra unnecesary node*/}
         {price<20000 ? <p>No Acesseries</p>: <a href='./'>Extra Acceseries</a>}
-        {price>40000 && <p>Discount:5%</p>} 
-        {/* && operator, if stament False nothing will execute as false&& = false*/}
+        {/*OR*/}
+        {price>40000 ? <p>Discount: 5%</p>:null}
+        {/*OR*/}
+        {price>40000 && <p>Discount:5%</p>} {/* && operator, if stament is False then it will not execute as, false&& = false*/}
         </div>
     )
 }
+
+// Practice Question: Display User Names with Diffrent Colours *******************************************
+// Card.jsx  {Here basically you define different "variables" and their "style"}
+import './Card.css' 
+function Card({name, col}) {
+    return (
+        <div className="Card">
+            <h2 style={{color: col}}>Hello {name}</h2>
+        </div>
+    );
+}
+export default Card;
+
+// CardLump.jsx  {Here you give "values" to different variables, known as "Props"}
+import Card from './Card.jsx'
+function CardLump(){
+    return(
+        <>
+        <Card col = 'red' name = 'Akansha'/>
+        <Card col = 'yellow' name='Shriya'/>
+        <Card col = 'pink'/>
+        <Card col = 'green'/>
+        <Card col = 'blue'/>
+        </>
+    )
+}
+export default CardLump
