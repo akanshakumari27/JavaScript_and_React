@@ -1,3 +1,5 @@
+// In react page, inspect -> console, you will see, it's asking to install "React DevTools", install that for better React Expierence
+
 // *** App.jsx ***
 import ProductTab from './ProductTab'
 
