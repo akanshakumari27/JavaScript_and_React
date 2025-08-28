@@ -17,14 +17,17 @@ function outer(){
 import {useState} from "react"
 
 export default function Button(){
-    let [ count, setCount] = useState({red:0, yellow:0, green:0, blue:0}) //Can write for both (Array & Object)
+    let [count, setCount] = useState({red:0, yellow:0, green:0, blue:0}) //Can write for both (Array & Object)
 
     function blueCount(){
         count.blue+=1
-        setCount({...count}) /*Spread so that can create it's new adress nd work with by acessing particular key required form an Object
-        (because we can't directly see Updated Object, need to pass it's copy)*/
-   /*OR setCount({...count , blue: count.blue+1 }) */
-   /*OR setCount(()=>{
+        setCount({...count}) // Spread so that can create it's new adress and work with by acessing particular key required form an Object
+        // (because we can't directly see Updated Object, need to pass it's copy)
+        // We are spreading it because the updation is occuring only in key's value, but it won't directly update the Object key's value.
+        // we need to Recreate whole Object with each updated values, therfore using spread to Recreate Object with updated new values, whenever changes occurs
+  
+   // OR setCount({...count , blue: count.blue+1 }) */
+   // OR setCount(()=>{
     return {...count , blue: count.blue+=1}
    })  as whenever our next value Depends on Previous Value, we use callBack(better approch) */
     }
@@ -56,6 +59,37 @@ export default function Button(){
         </div>
     )
 }
+
+// Method 2 {I done Personally, Short and Crisp, But revise above method to learn abot working of "Object and State"}
+// Button.jsx
+import {useState} from 'react'
+export default function Button({col}){
+    let [count, setcount] = useState(0);
+    let set = ()=>{
+        setcount(count+1)
+    }
+
+    return(
+        <>
+        <p>{col} moves: {count}</p>
+        <button style={{backgroundColor: col}} onClick={set}>+1</button>
+        </>
+    )
+}
+// CombButton.jsx
+import Button from './Button.jsx'
+
+export default function CombButton(){
+    return(
+        <>
+        <Button col='red'/>
+        <Button col='green'/>
+        <Button col='yellow'/>
+        <Button col='blue'/>
+        </>
+    )
+}
+
 
 // *** Array and State ***
 import {useState} from "react"
