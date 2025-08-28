@@ -1,3 +1,8 @@
+// States in React
+// Change in Component never brings Change or Update in UI
+// The state is a built-in React Object that is used to contain data or information about the component
+// A component state can change over time; whenever it changes, the component re-renders
+
 // *** Hooks! ***
 // Earlier Components were build under Classes known as "Class Component" but Nowadays it build under Function Known as "Functional Component".
 // ThereFor Hooks allows us to use some Features in Functional Component which was present in Class Component but not in Funcional.
