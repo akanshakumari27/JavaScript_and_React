@@ -110,7 +110,7 @@ export default function Button(){
         // This will update 2 times, therefor 0,2,4,6
         // OR just setCount(count+35)
         // setCount(25) ,it will directly return 25
-    } 
+    }  
     return(
         <div onClick={getCount}>
             <h2>Your CountUp: {count} </h2>
