@@ -118,3 +118,28 @@ export default function Button(){
         </div>
     )
 }
+
+// Counter 3
+// Here you will do Intialization with a function
+import {useState} from 'react'
+
+function set(){
+    console.log('first execution')
+    return Math.random();
+}
+
+export default function Practice(){
+    // If use (set()), means you are executing the function, then number of times u click button then that number of times, function set() will execute
+    // you can check from console.log(), which is unecessary, because in first exeution we got intial value, so don't need to execute set() again, for uncessary space and time
+    let [count, setcount] = useState(set);  // therfore use set without ()
+    let get = ()=>{
+        setcount(count+1)
+        console.log('second execution')
+    }
+    return(
+        <>
+        <p>Count = {count}</p>
+        <button onClick={get}>Click me!</button>
+        </>
+    )
+}
