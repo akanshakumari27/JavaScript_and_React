@@ -1,0 +1,92 @@
+/* Search: MDN CSS refrences */
+
+// **** Inline Style ****
+<button style="color: red; background-color: yellow">
+
+// **** Using Style Tag inside Heading of HTML (But problem, u can use that style only for that presentend file) ****
+<style>
+h1{
+  color: red;
+}
+</style>
+
+// **** External CSS File ****
+<head>
+  <link rel='stylesheet' ref='style.css'>
+</head>
+
+// **** COLOR SYSTEM ****
+-> Each browser recognizes around 140 named colors
+-> RGB(0,0,0) = Black / RGB(255,255,255) = White
+RGB(23,23,23) if all same, these gives Shades of Grey
+
+"Search: Color Picker"
+
+-> Hexadecimal Letters (Base 16, means 16 digits/characters) (0,1,2,3,4,5,6,7,8,9A,B,C,D,E,F) 
+#ffffff = White / #000000 = Black
+#2h2h2h = Shade of Grey
+# If written: #0f0 (means #00ff00)
+
+// **** Text Properties ****
+text-align
+font-weight
+text-decoration
+line-height
+letter-spacing
+font-size
+
+## Text-align
+h1{
+    text-align: center;
+}
+h1{
+    text-align: right;
+    width: 50%;
+}
+// Both are same! Text-align actually depends on Parents element, not in browser size! Therefore still alignment may vary (MDN text-align)
+
+text-align: left/start
+text-align: right/end
+text-align: center
+text-align: justify (this display all sentence and characters with spaces, such that it covers whole width of page)
+
+## Font-weight
+It ranges from 100 to 900
+font-weight: normal  // 400
+font-weight: bold    // 700
+font-weight: 100
+font-weight: lighter
+font-weight: bolder
+
+## Text-decoration  (text-decoration MDN, it will show how u can use diffrent colors of line)
+text-decoration: underline;
+text-decoration: overline;
+text-decoration:line-through;
+text-decoration: red underline;
+text-decoration: wavy blue underline;
+text-decoration: dotted underline;
+text-decoration: double red underline;
+
+In anchor tag; bydefault underline is there in link, therefore you can use 'none' to remove that!
+text-decoration: red none;
+
+## Line-height (height between two line sentences)
+line-height: normal; (~1)
+line-height: 2.5;
+
+## Letter-spacing (Space between alphabets)
+letter-spacing: 2px;
+letter-spacing:normal;
+
+## Font-Family
+font-family: arial;
+font-family: avant garde, diodt, sans-serif;  (giving multiple options, because it might happend that some browser dont support any particular font)
+https://www.cssfontstack.com/  (Here you can see diffrent families of diffrent fonts)
+
+text-transform: uppercase;
+
+// **** Font-size units in CSS ****
+-> Absolute: px | pt | pc | cm | mm |in  (We don't usually use in Responsive Websites; because they are fixed size, can't adopt size according to screen)
+  (1 inch = 96px) (1 inch = 72pt)
+
+-> Relative: % | em | rem | ch | vh | vw | ++ many more
