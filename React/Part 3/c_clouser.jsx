@@ -1,5 +1,17 @@
-// Clouser is the Feature in jsavascript, where "Inner Function" has an acess to the variable of an "Outer Function"
+// Clouser is the Feature in jsavascript, where "Inner Function" has always an acess of an "Outer Function's" Variable
+// Example
+function outer(){
+    let variable1 = 10;
+    function inner(){
+        let variable2 = 20;
+        console.log(a+b);   //here it's accessing and using outer variable
+    }
+    return inner;
+}
 
+// If we call only "Inner Function", it have variable of outer function too, but it will still execute sucesfully!
+// because inner function Preserves the Outer variable's value and this is known "Scope Chaining".
+    
 // *** Object and State ***
 // Task: creating a Ludo button for Total number of counts of an each Color, no use of Clouser here though 
 import {useState} from "react"
