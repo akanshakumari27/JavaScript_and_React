@@ -49,7 +49,7 @@ import {useState} from "react"; // you need to import externally
 export default function(){
     
     {/* We need to write this inside Function*/}
-    let [count, setCount] = useState(0);   {/* useState(0) ~ intialization */}
+    let [count, setCount] = useState(0);   {/* useState(0) ~ intialization, So except this whole code Rerenders, when Clicked Button */}
     
     let incCount=()=>{   {/*Or function incCount(){}*/}
         {/* count = count + 1 */}
