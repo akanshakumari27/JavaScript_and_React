@@ -28,11 +28,17 @@ function getEvent(event){
     console.log(event)  //this will print all Event object's Methods and Attributes!
     console.log("Submitted")
     event.preventDefault() //One of the Event's Method, used to prevent Default Submission of Form!
+
+    const inputValue = event.target[0].value;
+    console.log("User input:", inputValue);
+
+    const inputValue = event.target.yourText.value;
+    console.log(inputValue);
 }
 export default function Button(){
     return(
         <form onSubmit={getEvent}> {/* Here onSubmit's Methods and Attributes will display */} 
-            <input type="text" placeholder="Write here.."></input>
+            <input type="text" placeholder="Write here.." name='yourText'></input>
             <button>Click Me!</button>  {/* or you can use onClick here, both will work same!*/}
         </form>
     )
