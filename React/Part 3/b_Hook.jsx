@@ -8,12 +8,12 @@
 let count = 0;
 function get(){
     count = count+1;
-    console.log(count)  //it will print!
+    console.log(count)  //here u will notice, it prints 1 step previous (because this prints on console, before Render)
 }
 function Practice(){
     return(
         <>
-        <p>{count}</p>  {/*But this won't*/}
+        <p>{count}</p>  {/* And this prints in UI after Render*/}
         <button onClick={get}>Click Me!</button>
         </>
     )
