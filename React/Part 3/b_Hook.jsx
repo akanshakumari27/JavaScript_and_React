@@ -89,20 +89,27 @@ export default function(){
 
 
 // *** Counter 2 ***
+// When you want to increase counter 2 times!
 import {useState} from "react"
 
 export default function Button(){
     let [count , setCount] = useState(0)
 
     function getCount(){
+        // This method will not work, (it will still increase 1 time) because it goes ascynchrnously
+        setCount(count+1);
+        setCount(count+1);
+
+        // So we need to use CallBacks for it; therefore this will work!
         setCount((currentCount)=>{
             return currentCount + 1;
         })
         setCount((currentCount)=>{
             return currentCount + 1;
         })
-        {/*This will update 2 times, therefor 0,2,4,6*/}
-        {/* setCount(25) ,it will directly return 25*/}
+        // This will update 2 times, therefor 0,2,4,6
+        // OR just setCount(count+35)
+        // setCount(25) ,it will directly return 25
     } 
     return(
         <div onClick={getCount}>
