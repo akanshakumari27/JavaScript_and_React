@@ -27,9 +27,10 @@ export default function Button(){
         // we need to Recreate whole Object with each updated values, therfore using spread to Recreate Object with updated new values, whenever changes occurs
   
    // OR setCount({...count , blue: count.blue+1 }) */
-   // OR setCount(()=>{
+   // OR 
+    setCount(()=>{
     return {...count , blue: count.blue+=1}
-   })  as whenever our next value Depends on Previous Value, we use callBack(better approch) */
+   })  // as whenever our next value Depends on Previous Value, we use callBack(better approch) {as in callBack if previous fail, it will stop further execution too}
     }
     function redCount(){
         setCount(()=>{
