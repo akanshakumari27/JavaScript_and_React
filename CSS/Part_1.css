@@ -90,3 +90,135 @@ text-transform: uppercase;
   (1 inch = 96px) (1 inch = 72pt)
 
 -> Relative: % | em | rem | ch | vh | vw | ++ many more
+
+// **** Decendeant Selector ****
+[Styling on Child of given tag]
+div p{ }
+p a{ }        //Anchor tags inside Para tags
+.post a{ }    //Anchor tags inside Class post
+nav ul li a{ }  //Navigation , ul, li, anchor
+nav a{ }        //This will also work
+
+
+// **** Adjacent Sibling Combinator ****
+[Styling on Siblings]
+p + h3{ }  //para and heading3, which are on same level and comes immediately
+.upVot + button{ }  //class and button
+
+// **** Child Combinator ****
+[Styling on direct Child]
+div > input{ }  //input which is just direct after div
+nav > a{ }      // Taking above example(decendent selector) it will not work, because 'a' is not direct child of 'nav'
+
+
+// **** Attribute Selector ****
+Search (Atribute Selector MDN, to get more various types)
+input[type='password']{ }    //if input box type is password, then apply this particular styling
+input[type='text']{ }        //if input box type is text, then apply this particular styling
+input[type]{ }               //if input box who have type, which is usually in evey inputs, then apply this particular styling
+
+(Both are same!! to give style for para inside div with id name #myId)
+#myId p{ }
+div[id='myId'] p{ }
+
+// **** Pseudo Class **** (search in MDN)
+(A keyword added to selector, which let you style in specific condition of selected elements)
+:hover
+:active
+:checked  //for Radio and checkbox
+:nth-of-type
+
+button:hover{  //on just hovering above
+  background-color: black;
+  color:red;
+}
+
+p:active{ }  //on clicking the para
+
+input[type='radio]:checked + label {}  //because radio button's text is written in label, so on checking we want change in Label's text
+
+div:nth-of-type(2n){ }  //styling on every alternate div elements
+
+
+// **** Pseudo Elements ****
+(A keyword added to selector, which let you style specific part of selected elements)
+::first-letter
+::first-line
+::selection
+
+h1::first-letter{color: black}   //first letter of h1 will convert into Black
+p::first-line{colr: red}         //first line of para will convert into red
+p::selection{color: pink}        //with hover, when you select any para, that selected portion will display in pink
+
+
+// **** Cascading ****
+The CSS Cascade algorithm's job is to select CSS declaration in order to determine the correct values for CSS properties.
+h2{}
+h2{}  //second h2 is preferable
+
+<link rel='stylesheet' href='style1.css'>
+<link rel='stylesheet' href='style2.css'>   //second stylesheet is preferable
+
+** Selector Specificity **
+(id) , (class, attribute, pesudo-class) , (element, pesudo-element)
+inline style > id > class > element
+(Specificity is an algorithm that calculates the weight that is applied to a given CSS declaration)
+(Hover in Css Style sheet, you will get to see specificity of each elements present in CSS file)
+
+(1, 0, 2), as 1 means style present in id, therfore high specificity and prefrence in styling, if you apply different style, with class, it won't prefer.
+
+<div> <p class='para'> This is my Para </p> </div>
+
+div p{
+  background-color: black;   (0,0,2)
+}
+.para{
+  background-color: red;     (0,1,0)  //10 therfore this color will apply
+}
+p{
+  background-color: green;    (0,0,1)
+}
+
+(0,2,1)
+(0,2,1)   //this will apply
+(0,2,0)   //if specificity same; therefore cascading will apply, therfore style of (bottom with high specificity) will apply
+
+// **** !important ****
+(This indicates the most prior and specific style, means you once marked it as "!important" then you won't able to change it later)
+
+h3{
+  background-color: blue !important;  //this will prefer
+}
+h3{
+  background-color: red;
+}
+
+// **** Inherit in CSS ****
+Here we will see, how Inherit works in different Cases and Scenarios
+
+    <ul style='background-color: red;'>   
+        <p style="background-color: yellow;"> ijmrpoep
+            <ul> jufitrplds
+                <li>bnd</li>
+                <li>gbdn</li>
+                <li>vb</li>
+            </ul>
+        </p>
+    </ul>
+Red colour will set for all p,ul,li (as child inherit properties from parents)
+Yellow colour will set for only p, will not inherit by ul and li (because they will look for more upper Parent property and will inherit that only)
+
+{Input boxes and buttons} by default don't inherit the property from Parents
+
+input{
+  bacground-color: inhert;   //now it will inherit background-color form it's parents 
+}
+
+Inspect -> You can directly change Style from there -> Styles -> Tick and UnTick too
+
+li:hover{
+    background-color: blue;
+}
+Inspect -> style -> :hov (From you can see more Pseudo class and Alternate them)
+
+** For better colour combination; you can search (Color palletts) **
