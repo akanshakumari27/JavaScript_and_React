@@ -67,20 +67,23 @@ export default function(){
 
 
 // *** Liked Button ***
+// Go to "Font Awesome CDN" and paste link in (index.html) and from "Font Awesome" search for hearts.
 import {useState} from "react";
 
 export default function(){
-    // Hooks can only be used inside Function
+    // Hooks can only be used inside Function and you can Call Multiple Hook, given below
+    
     let [ like , setLike ] = useState(true)
     let [ count, setCount ] = useState(20)
     function getLike(){
-        setLike(!like)  
-        setCount( like? count+1:count-1)
+        setLike(!like)   //toggle: (if like = True, it will turn False, and if False it will turn True)
+        setCount(like? count+1:count-1)
     }
     return(
         <div>
             <p onClick={getLike}>
-                {like? <i className="fa-regular fa-heart"></i> : <i className="fa-solid fa-heart" style={{color:"red"}}></i>}
+                {/* checking is current like True or False, and Toggle accordingly */}
+                {like? <i className="fa-regular fa-heart"></i> : <i className="fa-solid fa-heart" style={{color:"red"}}></i>} 
             </p>
             <p>Clicks = {count}</p>
         </div>
