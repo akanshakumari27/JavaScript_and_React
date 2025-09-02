@@ -102,8 +102,8 @@ export default function Button(){
     function blueCount(){
         count.blue+=1
         setCount({...count}) 
-        setPrint(()=>{
-            return[...print,"Blue, "]
+        setPrint(()=>{   //as here New value depends on previous, therfore will take callBacks using Arrow function
+            return[...print,"Blue, "]   //spreading and adding element in Array
         })
     }
     function redCount(){
