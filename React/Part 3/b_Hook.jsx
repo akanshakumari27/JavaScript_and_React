@@ -13,7 +13,7 @@ function get(){
 function Practice(){
     return(
         <>
-        <p>{count}</p>  {/* And this prints in UI after Render*/}
+        <p>{count}</p>  {/* And this prints in UI after Render, but after using useState, currently this will not print anything */}
         <button onClick={get}>Click Me!</button>
         </>
     )
