@@ -17,7 +17,7 @@ Add a Todo, Mark as Done, Delete a Todo
   payload: '768'  //id of Task, which we want to Delete
 } 
   *}
-
+// ***************************************************************************************************************************************************
 // Creating a Reducer!! 
 // (state, action) => {//update state}
 // Reducer is Object of Functions; Means we pass an "Object" consisting of multiple "Functions"!!
@@ -70,6 +70,7 @@ export const todoSlice = createSlice({
 export const { addTodo, deleteTodo, markAsDone } = todoSlice.actions;
 export default todoSlice.reducer;
 
+// ***************************************************************************************************************************************************
 //Now Import these in {store.js} file
 import { configureStore } from '@reduxjs/toolkit'
 import todoReducer from '..features/todo/todoSlice'
@@ -77,6 +78,7 @@ import todoReducer from '..features/todo/todoSlice'
 export const store = configureStore({
     reducer: todoReducer
 })  
+// ***************************************************************************************************************************************************
 
 // Cleaner Version of {todoSlice.js}
 import { createSlice, nanoid } from '@redux/toolkit';
