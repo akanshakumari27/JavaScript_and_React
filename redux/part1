@@ -1,0 +1,29 @@
+Redux is State-Management library for JS Apps
+Redux is built for larger and more Complex Applications
+
+TERMINAL:
+-> npm create vite@latest
+-> cd _givenName
+-> npm install (to install all Depdencies)
+-> npm run dev
+(in Chrome, search : Redux -> get started -> scroll down -> install Redux Toolkit)
+-> npm install @reduxjs/toolkit
+-> npm install react-redux
+(After installing these two, you can verify it from, package.json -> 2 depedencies will visible of Redux!)
+
+Project Set-Up (Mainly devided into 3 Parts)
+-> Store
+-> Actions
+-> Reducer(s)
+
+{ Basice ReduxSet-Up}
+
+import { cofigureStore } from '@reduxjs/toolkit';
+
+//calling configureStore() function and storing in const variable named 'store'
+export const store = configureStore({ 
+    //passing empty reducer object
+  reducer: {},  
+})
+
+-> Actions Tells, what are possible actions we will be performing 
